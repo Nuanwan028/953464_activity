@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Kmj Shop',
       theme: ThemeData(
-        
         colorScheme: .fromSeed(
           seedColor: const Color.fromARGB(255, 206, 71, 176),
         ),
@@ -51,7 +50,17 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Text("Calculate", style: TextStyle(fontFamily: "maa"),),
+            Text(
+              "Calculate",
+              style: TextStyle(
+                fontFamily: "maa",
+                fontSize: 48,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+                color: Colors.blueAccent,
+                backgroundColor: const Color.fromARGB(255, 255, 136, 175),
+              ),
+            ),
             priceTextField(),
             amountTextField(),
             calculateButton(),
