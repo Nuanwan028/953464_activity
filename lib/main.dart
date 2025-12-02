@@ -61,6 +61,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 backgroundColor: const Color.fromARGB(255, 255, 136, 175),
               ),
             ),
+            
+            Image.asset("assets/burger.png", height: 100),
             priceTextField(),
             amountTextField(),
             calculateButton(),
