@@ -1,3 +1,4 @@
+import 'package:firstapp/pages/calc.dart';
 import 'package:flutter/material.dart';
 
 class ContactPage extends StatefulWidget {
@@ -8,8 +9,50 @@ class ContactPage extends StatefulWidget {
 }
 
 class _ContactPageState extends State<ContactPage> {
+  // final items = List<String>.generate(100, (i) => "Item $i");
+
   @override
   Widget build(BuildContext context) {
-    return ListView(children: [Center(child: Column(children: [Text("Nuanwan Wongrat"),Text("@CAMT CMU")],),)],);
+    List mydata = ['apple', 'banana', 'cherry'];
+
+    return Scaffold(
+      body: ListView.builder(
+        itemBuilder: (context, index) {
+          return ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CalculatePage()),
+              );
+            },
+            leading: Icon(Icons.apple, color: Colors.pinkAccent),
+            title: Text(mydata[index]),
+          );
+        },
+        itemCount: mydata.length,
+      ),
+    );
+
+    // return ListView(
+    //   children: [
+    //     ListTile(
+    //       onTap: () {},
+    //       leading: Icon(Icons.apple),
+    //       title: Text(mydata[0]),
+    //       subtitle: Text("This is an apple"),
+    //     ),
+    //     ListTile(
+    //       onTap: () {},
+    //       leading: Icon(Icons.heart_broken, color: Colors.red),
+    //       title: Text(mydata[1]),
+    //     ),
+    //     ListTile(
+    //       onTap: () {},
+    //       leading: FlutterLogo(),
+    //       title: Text(mydata[2]),
+    //       trailing: Icon(Icons.star),
+    //     ),
+    //   ],
+    // );
   }
 }
