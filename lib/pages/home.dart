@@ -24,6 +24,7 @@ class _HomePageState extends State<HomePage> {
                 data[index]['title'],
                 data[index]['subtitle'],
                 data[index]['image_url'],
+                data[index]['detail'],
               );
             },
             itemCount: data.length,
@@ -34,7 +35,12 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget MyBox(String title, String subtitle, String imageUrl) {
+  Widget MyBox(String title, String subtitle, String imageUrl, String detail) {
+    var v1, v2, v3, v4;
+    v1 = title;
+    v2 = subtitle;
+    v3 = imageUrl;
+    v4 = detail;
     return Container(
       margin: EdgeInsets.only(top: 20),
       padding: EdgeInsets.all(20),
@@ -71,7 +77,7 @@ class _HomePageState extends State<HomePage> {
               print("Next Page >>");
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => DetailsPage()),
+                MaterialPageRoute(builder: (context) => DetailsPage(v1, v2, v3, v4)),
               );
             },
             child: Text(

@@ -2,16 +2,19 @@
   {
     "title": "What is computer?",
     "subtitle": "Computer is an electronic device that manipulates information, or data.",
-    "image_url": "https://cdn.pixabay.com/photo/2022/09/05/18/52/tomato-7434955_1280.jpg"
+    "image_url": "https://cdn.pixabay.com/photo/2022/09/05/18/52/tomato-7434955_1280.jpg",
+    "detail": "A computer is a machine that can be instructed to carry out sequences of arithmetic or logical operations automatically via computer programming. Modern computers have the ability to follow generalized sets of operations, called programs. These programs enable computers to perform an extremely wide range of tasks."
   },
   {
     "title": "What is Flutter?",
     "subtitle": "Flutter is an open-source UI software development kit created by Google.",
-    "image_url": "https://cdn.pixabay.com/photo/2024/02/24/17/37/lemons-8594421_1280.jpg"
+    "image_url": "https://cdn.pixabay.com/photo/2024/02/24/17/37/lemons-8594421_1280.jpg",
+    "detail": "Flutter is used to develop cross platform applications for Android, iOS, Linux, Mac, Windows, Google Fuchsia, and the web from a single codebase. The first version of Flutter was known as 'Sky' and ran on the Android operating system. It was unveiled at the 2015 Dart developer summit, with the stated intent of being able to render consistently at 120 frames per second."
   },
   {
     "title": "What is Dart?",
     "subtitle": "Dart is a programming language designed for building web, server, desktop, and mobile applications.",
-    "image_url": "https://cdn.pixabay.com/photo/2020/03/11/13/18/food-4922138_1280.jpg"
+    "image_url": "https://cdn.pixabay.com/photo/2020/03/11/13/18/food-4922138_1280.jpg",
+    "detail": "Dart is an open-source, general-purpose programming language originally developed by Google and later approved as a standard by Ecma (ECMA-408). It is used to build mobile, desktop, server, and web applications. Dart is an object-oriented, class-based, garbage-collected language with C-style syntax. It supports interfaces, mixins, abstract classes, reified generics, and optional typing."
   }
 ]
