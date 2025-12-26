@@ -16,9 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Kmj Shop',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor:  Colors.deepPurple,
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: const MyHomePage(title: 'Calculate Change'),
     );
@@ -49,9 +47,16 @@ class _MyHomePageState extends State<MyHomePage> {
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'HomePage'),
-          BottomNavigationBarItem(icon: Icon(Icons.calculate),label: 'Calculate',),
-          BottomNavigationBarItem(icon: Icon(Icons.contact_mail),label: 'Contact',),
-        ],onTap: (index) {
+          BottomNavigationBarItem(
+            icon: Icon(Icons.calculate),
+            label: 'Calculate',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.contact_mail),
+            label: 'Contact',
+          ),
+        ],
+        onTap: (index) {
           setState(() {
             _currentIndex = index;
           });

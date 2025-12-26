@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:firstapp/pages/detail.dart';
 import 'package:flutter/material.dart';
 
@@ -13,32 +15,28 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(24.0),
-      child: ListView(
-        children: [
-          MyBox(
-            "What is computer?",
-            "Computer is an electronic device that manipulates information, or data.",
-            "https://cdn.pixabay.com/photo/2022/09/05/18/52/tomato-7434955_1280.jpg",
-          ),
-          SizedBox(height: 24),
-          MyBox(
-            "What is Flutter?",
-            "Flutter is an open-source UI software development kit created by Google.",
-            "https://cdn.pixabay.com/photo/2024/02/24/17/37/lemons-8594421_1280.jpg",
-          ),
-          SizedBox(height: 24),
-          MyBox(
-            "What is Dart?",
-            "Dart is a programming language designed for building web, server, desktop, and mobile applications.",
-            "https://cdn.pixabay.com/photo/2020/03/11/13/18/food-4922138_1280.jpg",
-          ),
-        ],
+      child: FutureBuilder(
+        builder: (context, snapshot) {
+          var data = json.decode(snapshot.data.toString());
+          return ListView.builder(
+            itemBuilder: (BuildContext context, int index) {
+              return MyBox(
+                data[index]['title'],
+                data[index]['subtitle'],
+                data[index]['image_url'],
+              );
+            },
+            itemCount: data.length,
+          );
+        },
+        future: DefaultAssetBundle.of(context).loadString('assets/data.json'),
       ),
     );
   }
 
   Widget MyBox(String title, String subtitle, String imageUrl) {
     return Container(
+      margin: EdgeInsets.only(top: 20),
       padding: EdgeInsets.all(20),
       // height: 175,
       decoration: BoxDecoration(
@@ -76,7 +74,10 @@ class _HomePageState extends State<HomePage> {
                 MaterialPageRoute(builder: (context) => DetailsPage()),
               );
             },
-            child: Text("read more", style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w500)),
+            child: Text(
+              "read more",
+              style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w500),
+            ),
           ),
         ],
       ),

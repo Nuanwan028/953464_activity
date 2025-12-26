@@ -1,0 +1,17 @@
+[
+  {
+    "title": "What is computer?",
+    "subtitle": "Computer is an electronic device that manipulates information, or data.",
+    "image_url": "https://cdn.pixabay.com/photo/2022/09/05/18/52/tomato-7434955_1280.jpg"
+  },
+  {
+    "title": "What is Flutter?",
+    "subtitle": "Flutter is an open-source UI software development kit created by Google.",
+    "image_url": "https://cdn.pixabay.com/photo/2024/02/24/17/37/lemons-8594421_1280.jpg"
+  },
+  {
+    "title": "What is Dart?",
+    "subtitle": "Dart is a programming language designed for building web, server, desktop, and mobile applications.",
+    "image_url": "https://cdn.pixabay.com/photo/2020/03/11/13/18/food-4922138_1280.jpg"
+  }
+]
